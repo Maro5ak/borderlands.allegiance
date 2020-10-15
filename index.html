@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Borderlands 2 Allegiance Chooser Random Completely</title>
+</head>
+
+<body style= "background-color: gray; font-family: comic sans ms;">
+    <div class="mainpage" id="knedlik">
+        <script>
+            // Vladof, hyperion, bandit, torgue, dahl, jakobs, maliwan, tediore
+            // Krieg, Gaige, Maya, Salvador, Axton, Zer0
+            function getAllegiance() {
+                try{document.getElementById("aliText").remove();}catch(e){}
+                var manufacturers = ["Vladof", "Hyperion", "Bandit", "Torgue", "Dahl", "Jakobs", "Maliwan", "Tediore"];
+                var characters = ["Krieg", "Gaige", "Maya", "Maya", "Salvador", "Axton", "Zer0"];
+                var aliText = document.createElement("h1");
+                aliText.id = "aliText";
+                aliText.innerText = manufacturers[getRandom(8)] + " " + characters[getRandom(6)];
+                document.getElementById("knedlik").appendChild(aliText);
+            }
+
+            function getRandom(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+        </script>
+        <input type="button" onclick="getAllegiance()" value="Get Allegiance" style="font-family: comic sans ms;">
+        <h1 id="aliText">It will appear here, trust me</h1>
+    </div>
+</body>
+
+</html>

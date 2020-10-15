@@ -16,7 +16,7 @@
             function getAllegiance() {
                 try{document.getElementById("aliText").remove();}catch(e){}
                 var manufacturers = ["Vladof", "Hyperion", "Bandit", "Torgue", "Dahl", "Jakobs", "Maliwan", "Tediore"];
-                var characters = ["Krieg", "Gaige", "Maya", "Maya", "Salvador", "Axton", "Zer0"];
+                var characters = ["Krieg", "Gaige", "Maya", "Salvador", "Axton", "Zer0"];
                 var aliText = document.createElement("h1");
                 aliText.id = "aliText";
                 aliText.innerText = manufacturers[getRandom(8)] + " " + characters[getRandom(6)];
